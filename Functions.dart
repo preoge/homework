@@ -1,5 +1,5 @@
 void main() {
-  var result = fibonacci(30);
+  var result = fibonacci(40);
   print(result);
 }
 
