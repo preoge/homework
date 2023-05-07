@@ -31,7 +31,13 @@ assert(ingredients1.contains('titanium'));
 
 //检查所有项目是否都在集合中。
 assert(ingredients1.containsAll(['titanium', 'xenon']));
+ingredients.addAll(['gold', 'titanium', 'xenon']);
 
+// 创建两个集合的交集。
+var nobleGases = Set.from(['xenon', 'argon']);
+var intersection = ingredients.intersection(nobleGases);
+assert(intersection.length == 1);
+assert(intersection.contains('xenon'));
 
 
 
