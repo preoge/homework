@@ -2,17 +2,24 @@
 //服务器创建 WebSocket 并侦听以 ws://ー开头的 URL 上的请求，例如，ws://127.0.0.1:1337/ws。通过 WebSocket 传输的数据可以是字符串或 blob。
 //通常，数据是 JSON 格式的字符串。
 //要在 Web 应用程序中使用 WebSocket，首先创建一个 WebSocket 对象，将 WebSocket URL 作为参数传递:
+import 'dart:async';
+import 'dart:html';
+
 var ws = WebSocket('ws://echo.websocket.org');
 
 //发送数据
 //若要在 WebSocket 上发送字符串数据，请使用以下方法：send()
-ws.send('Hello from Dart!');
+// ws.send('Hello from Dart!') {
+//   // TODO: implement send
+//   throw UnimplementedError();
+// }
 
 //接收数据
 //若要在 WebSocket 上接收数据，请为消息注册侦听器 事件：
-ws.onMessage.listen((MessageEvent e) {
-  print('Received message: ${e.data}');
-});
+// ws.onMessage.listen((MessageEvent e)
+//  {
+//   print('Received message: ${e.data}');
+// })
 //消息事件处理程序接收消息事件对象。 此对象的字段包含来自服务器的数据。data
 
 //处理 WebSocket 事件
